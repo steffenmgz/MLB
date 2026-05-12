@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Little Baby – Gastgeschenke & Babygeschenke</title>
+  <meta name="description" content="Handgefertigte Gastgeschenke & Babygeschenke bei My Little Baby. Personalisierbar, liebevoll verpackt." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ─── NAVIGATION ─── -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <span class="logo-icon">🌸</span>
+        <span class="logo-text">My Little Baby</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link active">Start</a></li>
+        <li><a href="shop.html" class="nav__link">Shop</a></li>
+        <li><a href="#ueber-uns" class="nav__link">Über uns</a></li>
+        <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="btn-cart" id="cartBtn" aria-label="Warenkorb">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="nav__toggle" id="navToggle" aria-label="Menü">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero">
+    <div class="hero__media">
+      <video class="hero__video" id="heroVideo" autoplay muted loop playsinline poster="https://d8j0ntlcm91z4.cloudfront.net/user_37kumjbFc2lwdOwUfr0sGRm1URr/hf_20260512_000602_1af22648-3900-4123-a083-c87209ddbd98.png">
+        <!-- Hero-Video (Seedance 2.0) – wird nach Fertigstellung hier eingetragen -->
+        <source src="images/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content container">
+      <span class="hero__tag">Handgemacht mit Liebe ✨</span>
+      <h1 class="hero__title">Kleine Geschenke,<br /><em>große Freude</em></h1>
+      <p class="hero__sub">Personalisierte Gastgeschenke & Babygeschenke – für die schönsten Momente des Lebens.</p>
+      <div class="hero__cta">
+        <a href="shop.html" class="btn btn--primary">Jetzt entdecken</a>
+        <a href="#bestseller" class="btn btn--ghost">Bestseller ansehen</a>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+      <span>Scrollen</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ─── TRUST BAR ─── -->
+  <section class="trust-bar">
+    <div class="container trust-bar__inner">
+      <div class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        <span>Handgefertigt</span>
+      </div>
+      <div class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Versand in 2–4 Tagen</span>
+      </div>
+      <div class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Sicher bezahlen</span>
+      </div>
+      <div class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        <span>Personalisierbar</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── BESTSELLER ─── -->
+  <section class="section" id="bestseller">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Beliebt</span>
+        <h2 class="section__title">Unsere Bestseller</h2>
+        <p class="section__sub">Die meistgeliebten Gastgeschenke – direkt ins Herz.</p>
+      </div>
+      <div class="product-grid" id="bestsellerGrid">
+        <!-- JS-rendered -->
+      </div>
+      <div class="section__cta">
+        <a href="shop.html" class="btn btn--outline">Alle Produkte ansehen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── BRAND STORY ─── -->
+  <section class="brand-story">
+    <div class="container brand-story__inner">
+      <div class="brand-story__image">
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_37kumjbFc2lwdOwUfr0sGRm1URr/hf_20260512_000604_fd99da87-f490-4d36-ad5c-40144f1b8e12.png" alt="My Little Baby – handgemachte Gastgeschenke" loading="lazy" />
+        <div class="brand-story__badge">
+          <span class="badge-num">500+</span>
+          <span class="badge-label">glückliche Familien</span>
+        </div>
+      </div>
+      <div class="brand-story__text" id="ueber-uns">
+        <span class="section__tag">Über uns</span>
+        <h2 class="section__title">Gemacht mit<br /><em>Herz & Liebe</em></h2>
+        <p>Hinter jedem Gastgeschenk steckt eine Geschichte – und jede Menge Leidenschaft. Wir glauben daran, dass die kleinen Dinge die größten Momente ausmachen.</p>
+        <p>Unsere Produkte sind sorgfältig ausgewählt, liebevoll gestaltet und können individuell personalisiert werden – für Babypartys, Taufen, Geburtstage und alle besonderen Anlässe.</p>
+        <a href="shop.html" class="btn btn--primary">Unseren Shop entdecken</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── KATEGORIEN ─── -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Kategorien</span>
+        <h2 class="section__title">Für jeden Anlass</h2>
+      </div>
+      <div class="category-grid">
+        <a href="shop.html?cat=babyparty" class="category-card category-card--pink">
+          <div class="category-card__img"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_37kumjbFc2lwdOwUfr0sGRm1URr/hf_20260512_000821_4244b566-cb2d-4dc2-9ccb-f7157bee53c3.png" alt="Babyparty" loading="lazy" /></div>
+          <div class="category-card__body">
+            <h3>Babyparty</h3>
+            <span>Geschenke entdecken →</span>
+          </div>
+        </a>
+        <a href="shop.html?cat=taufe" class="category-card category-card--mint">
+          <div class="category-card__img"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_37kumjbFc2lwdOwUfr0sGRm1URr/hf_20260512_000824_7e8878d3-cdc7-4904-9c55-77a0c204a2a2.png" alt="Taufe" loading="lazy" /></div>
+          <div class="category-card__body">
+            <h3>Taufe</h3>
+            <span>Geschenke entdecken →</span>
+          </div>
+        </a>
+        <a href="shop.html?cat=geburtstag" class="category-card category-card--blue">
+          <!-- cat-geburtstag image pending – will be updated -->
+          <div class="category-card__img" style="background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:48px;">🎂</div>
+          <div class="category-card__body">
+            <h3>1. Geburtstag</h3>
+            <span>Geschenke entdecken →</span>
+          </div>
+        </a>
+        <a href="shop.html?cat=sets" class="category-card category-card--peach">
+          <div class="category-card__img"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_37kumjbFc2lwdOwUfr0sGRm1URr/hf_20260512_000833_cb2ffaf8-6474-4ef6-b6cf-a854ce11c1ca.png" alt="Geschenksets" loading="lazy" /></div>
+          <div class="category-card__body">
+            <h3>Geschenksets</h3>
+            <span>Sets entdecken →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIALS ─── -->
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Bewertungen</span>
+        <h2 class="section__title">Was unsere Kunden sagen</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <div class="testimonial__stars">★★★★★</div>
+          <p>„Die Gastgeschenke waren absolut traumhaft! Alle Gäste auf unserer Babyparty waren begeistert. Wir werden definitiv wieder bestellen."</p>
+          <span class="testimonial__author">– Lisa M., München</span>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial__stars">★★★★★</div>
+          <p>„Schnelle Lieferung, wunderschöne Verpackung und die Personalisierung war perfekt. Einfach herzallerliebst!"</p>
+          <span class="testimonial__author">– Sarah K., Berlin</span>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial__stars">★★★★★</div>
+          <p>„Für die Taufe unserer Tochter waren diese Gastgeschenke das i-Tüpfelchen. Qualität und Liebe zum Detail sind einzigartig."</p>
+          <span class="testimonial__author">– Julia F., Hamburg</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── NEWSLETTER ─── -->
+  <section class="newsletter">
+    <div class="container newsletter__inner">
+      <div class="newsletter__icon">💌</div>
+      <h2>Werde Teil unserer kleinen Welt</h2>
+      <p>Erhalte exklusive Angebote, neue Produkte und Inspirationen direkt in dein Postfach.</p>
+      <form class="newsletter__form" id="newsletterForm">
+        <input type="email" placeholder="Deine E-Mail-Adresse" required aria-label="E-Mail-Adresse" />
+        <button type="submit" class="btn btn--primary">Anmelden</button>
+      </form>
+      <p class="newsletter__hint">Kein Spam. Jederzeit abmeldbar.</p>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer" id="kontakt">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo-icon">🌸</span>
+        <span class="logo-text">My Little Baby</span>
+        <p>Handgefertigte Gastgeschenke<br />& Babygeschenke mit Liebe gemacht.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.17 1.22-5.17s-.31-.62-.31-1.54c0-1.44.84-2.52 1.88-2.52.89 0 1.32.67 1.32 1.47 0 .89-.57 2.23-.86 3.47-.24 1.03.51 1.88 1.52 1.88 1.82 0 3.04-2.33 3.04-5.09 0-2.09-1.41-3.66-3.95-3.66-2.88 0-4.68 2.15-4.68 4.57 0 .83.24 1.41.62 1.87.17.2.2.28.13.52-.04.17-.14.58-.18.74-.06.24-.24.33-.44.24-1.23-.5-1.81-1.85-1.81-3.37 0-2.5 2.1-5.51 6.26-5.51 3.35 0 5.56 2.43 5.56 5.04 0 3.45-1.92 6.03-4.75 6.03-.95 0-1.84-.51-2.14-1.09l-.59 2.27c-.21.82-.78 1.85-1.16 2.48.87.27 1.8.42 2.76.42 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          </a>
+          <a href="#" aria-label="Etsy">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9.6 1.6C9.6 1.6 9.5 3.2 9.5 5V6H8.3c-.7 0-1.3.1-1.5.1l-.3.1v1.4l.3.1c.2 0 .8.1 1.5.1H9.5v7.1c0 2 .1 2.9.2 3.3.4 1.5 1.4 2.2 3 2.2.8 0 1.5-.1 2.3-.4l.6-.2-.2-1.4-.6.1c-.5.1-1 .2-1.3.2-.5 0-.9-.1-1.1-.4-.3-.3-.4-.8-.4-2.2V8.8l.1-1.1h2.3l.2-.1.2-1.4-.2-.1h-2.5V5c0-1.8 0-3.3.1-3.4l.1-.2H9.6v.2z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">Alle Produkte</a></li>
+          <li><a href="shop.html?cat=babyparty">Babyparty</a></li>
+          <li><a href="shop.html?cat=taufe">Taufe</a></li>
+          <li><a href="shop.html?cat=geburtstag">1. Geburtstag</a></li>
+          <li><a href="shop.html?cat=sets">Geschenksets</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4>Info</h4>
+        <ul>
+          <li><a href="#ueber-uns">Über uns</a></li>
+          <li><a href="#">Versand & Lieferung</a></li>
+          <li><a href="#">Personalisierung</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="#">Impressum</a></li>
+          <li><a href="#">Datenschutz</a></li>
+          <li><a href="#">AGB</a></li>
+          <li><a href="#">Widerrufsrecht</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2025 My Little Baby. Alle Rechte vorbehalten.</p>
+        <div class="footer__pay">
+          <img src="images/pay-paypal.svg" alt="PayPal" />
+          <img src="images/pay-visa.svg" alt="Visa" />
+          <img src="images/pay-mc.svg" alt="Mastercard" />
+          <img src="images/pay-klarna.svg" alt="Klarna" />
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── CART DRAWER ─── -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer__head">
+      <h3>Dein Warenkorb</h3>
+      <button class="cart-drawer__close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-drawer__items" id="cartItems"></div>
+    <div class="cart-drawer__foot">
+      <div class="cart-total">
+        <span>Gesamt</span>
+        <span id="cartTotal">0,00 €</span>
+      </div>
+      <p class="cart-shipping">Versandkosten werden im Checkout berechnet</p>
+      <a href="checkout.html" class="btn btn--primary btn--full" id="checkoutBtn">Zur Kasse →</a>
+      <button class="btn btn--ghost btn--full" id="continueBtn">Weiter einkaufen</button>
+    </div>
+  </aside>
+
+  <!-- ─── TOAST ─── -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

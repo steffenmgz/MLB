@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produkt – My Little Baby</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <span class="logo-icon">🌸</span>
+        <span class="logo-text">My Little Baby</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Start</a></li>
+        <li><a href="shop.html" class="nav__link">Shop</a></li>
+        <li><a href="index.html#ueber-uns" class="nav__link">Über uns</a></li>
+        <li><a href="index.html#kontakt" class="nav__link">Kontakt</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="btn-cart" id="cartBtn" aria-label="Warenkorb">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="nav__toggle" id="navToggle" aria-label="Menü">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div style="padding:calc(var(--header-h) + 20px) 0 0; background:var(--cream);">
+    <div class="container" style="padding-bottom:16px;">
+      <nav style="font-size:13px; color:var(--text-light);">
+        <a href="index.html" style="color:var(--text-light)">Start</a>
+        <span style="margin:0 8px">›</span>
+        <a href="shop.html" style="color:var(--text-light)">Shop</a>
+        <span style="margin:0 8px">›</span>
+        <span id="breadcrumbName" style="color:var(--text)">Produkt</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- PRODUCT DETAIL -->
+  <section class="product-detail">
+    <div class="container">
+      <div class="product-detail__inner" id="productDetail">
+        <div style="text-align:center; padding:60px; color:var(--text-light)">Produkt wird geladen…</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED PRODUCTS -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Empfehlungen</span>
+        <h2 class="section__title">Das könnte dir auch gefallen</h2>
+      </div>
+      <div class="product-grid" id="relatedGrid"></div>
+    </div>
+  </section>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer__head">
+      <h3>Dein Warenkorb</h3>
+      <button class="cart-drawer__close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-drawer__items" id="cartItems"></div>
+    <div class="cart-drawer__foot">
+      <div class="cart-total"><span>Gesamt</span><span id="cartTotal">0,00 €</span></div>
+      <p class="cart-shipping">Versandkosten werden im Checkout berechnet</p>
+      <a href="checkout.html" class="btn btn--primary btn--full" id="checkoutBtn">Zur Kasse →</a>
+      <button class="btn btn--ghost btn--full" id="continueBtn" style="color:var(--text);">Weiter einkaufen</button>
+    </div>
+  </aside>
+  <div class="toast" id="toast"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kasse – My Little Baby</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <span class="logo-icon">🌸</span>
+        <span class="logo-text">My Little Baby</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Start</a></li>
+        <li><a href="shop.html" class="nav__link">Shop</a></li>
+        <li><a href="index.html#kontakt" class="nav__link">Kontakt</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="nav__toggle" id="navToggle" aria-label="Menü"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CHECKOUT PAGE -->
+  <div class="checkout-page">
+    <div class="container">
+      <!-- Progress Steps -->
+      <div style="display:flex;align-items:center;gap:0;margin-bottom:40px;justify-content:center;">
+        <div class="step active" data-step="1">1<span>Adresse</span></div>
+        <div class="step-line"></div>
+        <div class="step" data-step="2">2<span>Zahlung</span></div>
+        <div class="step-line"></div>
+        <div class="step" data-step="3">3<span>Bestätigung</span></div>
+      </div>
+
+      <div class="checkout-layout">
+        <!-- Form -->
+        <div class="checkout-form">
+          <!-- Step 1: Address -->
+          <div id="step1">
+            <h2>Lieferadresse</h2>
+            <form id="addressForm">
+              <div class="form-section">
+                <h3>Kontakt</h3>
+                <div class="form-group">
+                  <label for="email">E-Mail-Adresse *</label>
+                  <input type="email" id="email" name="email" placeholder="name@beispiel.de" required />
+                </div>
+              </div>
+              <div class="form-section">
+                <h3>Lieferadresse</h3>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="firstName">Vorname *</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Maria" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">Nachname *</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Muster" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="street">Straße & Hausnummer *</label>
+                  <input type="text" id="street" name="street" placeholder="Musterstraße 12" required />
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="zip">PLZ *</label>
+                    <input type="text" id="zip" name="zip" placeholder="12345" required pattern="[0-9]{5}" />
+                  </div>
+                  <div class="form-group">
+                    <label for="city">Stadt *</label>
+                    <input type="text" id="city" name="city" placeholder="München" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="country">Land *</label>
+                  <select id="country" name="country" required>
+                    <option value="DE">Deutschland</option>
+                    <option value="AT">Österreich</option>
+                    <option value="CH">Schweiz</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-section">
+                <h3>Personalisierung (optional)</h3>
+                <div class="form-group">
+                  <label for="personalization">Gewünschter Text / Name / Datum</label>
+                  <textarea id="personalization" name="personalization" placeholder="z.B. „Lena, geboren am 12.03.2025""></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;padding:16px">Weiter zur Zahlung →</button>
+            </form>
+          </div>
+
+          <!-- Step 2: Payment -->
+          <div id="step2" style="display:none">
+            <h2>Zahlungsmethode</h2>
+            <form id="paymentForm">
+              <div class="form-section">
+                <h3>Wähle deine Zahlungsart</h3>
+                <div class="payment-methods">
+                  <label class="payment-method">
+                    <input type="radio" name="payment" value="paypal" checked />
+                    <label>🅿️ PayPal</label>
+                  </label>
+                  <label class="payment-method">
+                    <input type="radio" name="payment" value="klarna" />
+                    <label>🛍️ Klarna – Jetzt kaufen, später bezahlen</label>
+                  </label>
+                  <label class="payment-method">
+                    <input type="radio" name="payment" value="card" />
+                    <label>💳 Kreditkarte (Visa / Mastercard)</label>
+                  </label>
+                  <label class="payment-method">
+                    <input type="radio" name="payment" value="transfer" />
+                    <label>🏦 Überweisung</label>
+                  </label>
+                </div>
+              </div>
+
+              <div id="cardFields" style="display:none;" class="form-section">
+                <h3>Kartendaten</h3>
+                <div class="form-group">
+                  <label>Karteninhaber</label>
+                  <input type="text" placeholder="Max Mustermann" />
+                </div>
+                <div class="form-group">
+                  <label>Kartennummer</label>
+                  <input type="text" placeholder="•••• •••• •••• ••••" maxlength="19" />
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Gültig bis</label>
+                    <input type="text" placeholder="MM/JJ" maxlength="5" />
+                  </div>
+                  <div class="form-group">
+                    <label>CVC</label>
+                    <input type="text" placeholder="•••" maxlength="4" />
+                  </div>
+                </div>
+              </div>
+
+              <div style="display:flex;gap:12px;margin-top:8px;">
+                <button type="button" onclick="goStep(1)" class="btn btn--outline" style="flex:1">← Zurück</button>
+                <button type="submit" class="btn btn--primary" style="flex:2;justify-content:center">Bestellung aufgeben →</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Step 3: Confirmation -->
+          <div id="step3" style="display:none;text-align:center;padding:40px 0;">
+            <div style="font-size:64px;margin-bottom:16px">🎉</div>
+            <h2 style="font-family:var(--font-serif);font-size:32px;margin-bottom:12px">Vielen Dank für deine Bestellung!</h2>
+            <p style="color:var(--text-light);margin-bottom:8px">Deine Bestellbestätigung wurde an deine E-Mail-Adresse geschickt.</p>
+            <p style="color:var(--text-light);margin-bottom:32px">Wir bearbeiten deine Bestellung liebevoll und versenden in 2–4 Werktagen. 🌸</p>
+            <a href="shop.html" class="btn btn--primary">Zurück zum Shop</a>
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <aside class="order-summary">
+          <h3>Deine Bestellung</h3>
+          <div class="order-items" id="orderItems"></div>
+          <hr class="order-summary-divider" />
+          <div class="order-line"><span>Zwischensumme</span><span id="orderSubtotal">0,00 €</span></div>
+          <div class="order-line"><span>Versand</span><span id="orderShipping">Kostenfrei ab 29 €</span></div>
+          <hr class="order-summary-divider" />
+          <div class="order-total"><span>Gesamt</span><span id="orderTotal">0,00 €</span></div>
+          <p style="font-size:12px;color:var(--text-light);margin-top:12px">Inkl. gesetzl. MwSt. · Versandkosten werden im nächsten Schritt berechnet.</p>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <style>
+    .step{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:12px;font-weight:600;width:60px;height:60px;border-radius:50%;background:var(--beige);color:var(--text-light);justify-content:center;transition:var(--transition)}
+    .step span{font-size:10px;font-weight:400;display:block;width:60px;text-align:center;margin-top:2px}
+    .step.active{background:var(--pink-dark);color:var(--white)}
+    .step.done{background:var(--mint-dark);color:var(--white)}
+    .step-line{flex:1;height:2px;background:var(--beige);max-width:80px}
+  </style>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

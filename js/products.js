@@ -156,6 +156,6 @@ const CATEGORIES = [
 const CAT_IMAGES = {
   babyparty:  CDN + "hf_20260512_000821_4244b566-cb2d-4dc2-9ccb-f7157bee53c3.png",
   taufe:      CDN + "hf_20260512_000824_7e8878d3-cdc7-4904-9c55-77a0c204a2a2.png",
-  geburtstag: "images/cat-geburtstag-placeholder.jpg", /* pending – update once ready */
+  geburtstag: CDN + "hf_20260512_001227_8e3d9af1-8b7a-4db9-8b31-5f334d84deca.png",
   sets:       CDN + "hf_20260512_000833_cb2ffaf8-6474-4ef6-b6cf-a854ce11c1ca.png"
 };

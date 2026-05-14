@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hochzeits-Konfigurator – My Little Baby</title>
+  <meta name="description" content="Gestalte dein personalisiertes Hochzeitsprodukt – Live-Vorschau und direkte Freigabe als Plottdatei." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/configurator.css" />
+</head>
+<body>
+
+  <!-- ─── NAVIGATION ─── -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <img src="images/MLB_CI-01.png" alt="My Little Baby" />
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Start</a></li>
+        <li><a href="shop.html" class="nav__link">Shop</a></li>
+        <li><a href="index.html#ueber-uns" class="nav__link">Über uns</a></li>
+        <li><a href="index.html#kontakt" class="nav__link">Kontakt</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="btn-cart" id="cartBtn" aria-label="Warenkorb">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="nav__toggle" id="navToggle" aria-label="Menü">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ─── HERO ─── -->
+  <section class="cfg-hero">
+    <div class="container">
+      <span class="section__tag">Hochzeits-Konfigurator</span>
+      <h1 class="cfg-hero__title">Dein persönliches<br /><em>Hochzeitsdesign</em></h1>
+      <p class="cfg-hero__sub">Gestalte dein Wunschprodukt in wenigen Schritten – mit Live-Vorschau und direkter Freigabe als fertige Plottdatei.</p>
+    </div>
+  </section>
+
+  <!-- ─── STEP INDICATOR ─── -->
+  <div class="cfg-steps-bar">
+    <div class="container">
+      <div class="cfg-steps">
+        <div class="cfg-step active" data-step="1">
+          <span class="cfg-step__num">1</span>
+          <span class="cfg-step__label">Produkt wählen</span>
+        </div>
+        <div class="cfg-step__line"></div>
+        <div class="cfg-step" data-step="2">
+          <span class="cfg-step__num">2</span>
+          <span class="cfg-step__label">Gestalten</span>
+        </div>
+        <div class="cfg-step__line"></div>
+        <div class="cfg-step" data-step="3">
+          <span class="cfg-step__num">3</span>
+          <span class="cfg-step__label">Freigabe</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── MAIN ─── -->
+  <main class="cfg-main" id="cfgMain">
+
+    <!-- ══ PANEL 1: Produkttyp wählen ══ -->
+    <div class="cfg-panel active" id="panel1">
+      <div class="section" style="padding-top:48px">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Welches Produkt<br /><em>möchtest du gestalten?</em></h2>
+            <p class="section__sub">Wähle einen Produkttyp – alle können individuell mit euren Namen und dem Hochzeitsdatum personalisiert werden.</p>
+          </div>
+
+          <div class="cfg-type-grid">
+
+            <!-- Hochzeitsschild -->
+            <button class="cfg-type-card" data-type="schild">
+              <div class="cfg-type-card__icon">
+                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="10" width="64" height="60" rx="3" stroke="#c4908a" stroke-width="1.5"/>
+                  <rect x="13" y="15" width="54" height="50" rx="2" stroke="#c4908a" stroke-width="0.5" stroke-dasharray="2.5 2"/>
+                  <path d="M8,18 L8,10 L16,10" stroke="#c4908a" stroke-width="1.2" fill="none"/>
+                  <path d="M64,10 L72,10 L72,18" stroke="#c4908a" stroke-width="1.2" fill="none"/>
+                  <path d="M8,62 L8,70 L16,70" stroke="#c4908a" stroke-width="1.2" fill="none"/>
+                  <path d="M64,70 L72,70 L72,62" stroke="#c4908a" stroke-width="1.2" fill="none"/>
+                  <text x="40" y="34" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-style="italic" fill="#4a4548">Julia</text>
+                  <text x="40" y="44" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#c4908a">&amp;</text>
+                  <text x="40" y="55" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-style="italic" fill="#4a4548">Marco</text>
+                </svg>
+              </div>
+              <h3>Hochzeitsschild<br />/ Poster</h3>
+              <p>Brautpaar-Namen &amp; Datum als elegantes Schild oder Poster – perfekt als Deko oder Willkommensschild.</p>
+              <span class="cfg-type-card__tag">A4 / A3 / A2 / Wunschformat</span>
+            </button>
+
+            <!-- Tischkarte -->
+            <button class="cfg-type-card" data-type="tischkarte">
+              <div class="cfg-type-card__icon">
+                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="6" y="24" width="68" height="36" rx="3" stroke="#c4908a" stroke-width="1.5"/>
+                  <path d="M6,32 L6,24 L14,24" stroke="#c4908a" stroke-width="1.2" fill="none"/>
+                  <path d="M66,24 L74,24 L74,32" stroke="#c4908a" stroke-width="1.2" fill="none"/>
+                  <path d="M6,52 L6,60 L14,60" stroke="#c4908a" stroke-width="1.2" fill="none"/>
+                  <path d="M66,60 L74,60 L74,52" stroke="#c4908a" stroke-width="1.2" fill="none"/>
+                  <line x1="16" y1="34" x2="64" y2="34" stroke="#c4908a" stroke-width="0.5"/>
+                  <text x="40" y="47" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-style="italic" fill="#4a4548">Lena Müller</text>
+                  <text x="40" y="56" text-anchor="middle" font-family="sans-serif" font-size="5.5" letter-spacing="1" fill="#7a7075">TISCH 4</text>
+                </svg>
+              </div>
+              <h3>Tischkarte<br />/ Platzkarte</h3>
+              <p>Individuelle Platzkarten für jeden Gast – mit Namen, Tischnummer und Hochzeitsdatum.</p>
+              <span class="cfg-type-card__tag">DIN A6 / Zelt-Karte</span>
+            </button>
+
+            <!-- Menükarte -->
+            <button class="cfg-type-card" data-type="menue">
+              <div class="cfg-type-card__icon">
+                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="20" y="6" width="40" height="68" rx="3" stroke="#c4908a" stroke-width="1.5"/>
+                  <rect x="23" y="9" width="34" height="62" rx="2" stroke="#c4908a" stroke-width="0.4" stroke-dasharray="2 1.5"/>
+                  <path d="M20,14 L20,6 L28,6" stroke="#c4908a" stroke-width="1.2" fill="none"/>
+                  <path d="M52,6 L60,6 L60,14" stroke="#c4908a" stroke-width="1.2" fill="none"/>
+                  <text x="40" y="24" text-anchor="middle" font-family="Georgia,serif" font-size="7" font-style="italic" fill="#4a4548">Julia &amp; Marco</text>
+                  <line x1="26" y1="29" x2="54" y2="29" stroke="#c4908a" stroke-width="0.6"/>
+                  <text x="40" y="37" text-anchor="middle" font-family="sans-serif" font-size="4.5" letter-spacing="1.5" fill="#a87068">VORSPEISE</text>
+                  <text x="40" y="44" text-anchor="middle" font-family="Georgia,serif" font-size="5.5" font-style="italic" fill="#4a4548">Tomatensuppe</text>
+                  <line x1="26" y1="48" x2="54" y2="48" stroke="#eeddd9" stroke-width="0.5"/>
+                  <text x="40" y="55" text-anchor="middle" font-family="sans-serif" font-size="4.5" letter-spacing="1.5" fill="#a87068">HAUPTGANG</text>
+                  <text x="40" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="5.5" font-style="italic" fill="#4a4548">Rinderfilet</text>
+                </svg>
+              </div>
+              <h3>Menükarte</h3>
+              <p>Elegante Menükarte mit Speisefolge für jeden Tisch – passend zu eurem Hochzeitsthema.</p>
+              <span class="cfg-type-card__tag">DIN A5</span>
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ PANEL 2: Formular + Live-Vorschau ══ -->
+    <div class="cfg-panel" id="panel2">
+      <div class="cfg-workspace">
+
+        <!-- Form column -->
+        <div class="cfg-form-col">
+          <div class="cfg-form-inner">
+            <button class="cfg-back-btn" id="backBtn1">← Produkt wechseln</button>
+            <h2 class="cfg-form__title" id="formTitle">Dein Hochzeitsprodukt</h2>
+            <p class="cfg-form__subtitle" id="formSubtitle"></p>
+            <div id="formFields"></div>
+            <div class="cfg-form-actions">
+              <button class="btn btn--primary btn--full" id="toStep3Btn">Vorschau bestätigen →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Preview column -->
+        <div class="cfg-preview-col">
+          <div class="cfg-preview-wrap">
+            <span class="cfg-preview-label">Live-Vorschau</span>
+            <div class="cfg-preview-box" id="svgPreview" aria-live="polite"></div>
+            <p class="cfg-preview-hint">Die Vorschau aktualisiert sich automatisch beim Tippen</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ══ PANEL 3: Freigabe ══ -->
+    <div class="cfg-panel" id="panel3">
+      <div class="cfg-approval">
+        <button class="cfg-back-btn" id="backBtn2">← Zurück zum Bearbeiten</button>
+
+        <div class="section__head" style="margin-bottom:32px">
+          <h2 class="section__title">Dein Design –<br /><em>bereit zur Freigabe?</em></h2>
+        </div>
+        <p class="cfg-approval__sub">Bitte überprüfe alle Angaben sorgfältig. Nach der Freigabe wird die fertige Plottdatei direkt an uns in Dropbox übermittelt.</p>
+
+        <!-- SVG preview -->
+        <div class="cfg-approval__preview" id="approvalPreview"></div>
+
+        <!-- Order summary -->
+        <div class="cfg-summary" id="orderSummary"></div>
+
+        <!-- Customer contact -->
+        <div class="cfg-customer-form">
+          <h3>Deine Kontaktdaten</h3>
+          <div class="cfg-field-row">
+            <div class="cfg-field">
+              <label for="custName">Dein Name <span class="cfg-req">*</span></label>
+              <input type="text" id="custName" class="cfg-input" placeholder="Vorname Nachname" autocomplete="name" required />
+            </div>
+            <div class="cfg-field">
+              <label for="custEmail">E-Mail-Adresse <span class="cfg-req">*</span></label>
+              <input type="email" id="custEmail" class="cfg-input" placeholder="deine@email.de" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="cfg-field">
+            <label for="custNote">Anmerkungen (optional)</label>
+            <textarea id="custNote" class="cfg-input cfg-textarea" rows="3" placeholder="Besondere Wünsche, Wunschformat-Angaben, Farbwünsche …"></textarea>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:8px">
+          <button class="btn btn--primary" id="approveBtn" style="font-size:16px;padding:16px 44px">
+            ✓ Design freigeben &amp; Datei übermitteln
+          </button>
+          <p class="cfg-approval__legal">Mit der Freigabe bestätigst du, dass alle Angaben korrekt sind. Die fertige SVG-Plottdatei wird direkt in unseren Dropbox-Ordner übertragen.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ PANEL 4: Erfolg ══ -->
+    <div class="cfg-panel" id="panel4">
+      <div class="cfg-success">
+        <div class="cfg-success__icon">✓</div>
+        <h2 class="section__title" style="text-align:center">Freigabe erteilt –<br /><em>Vielen Dank!</em></h2>
+        <p class="cfg-success__sub">Dein Design wurde erfolgreich übermittelt. Wir melden uns bald bei dir!</p>
+
+        <div class="cfg-success__details" id="successDetails"></div>
+
+        <div class="cfg-success__actions">
+          <button class="btn btn--primary" id="downloadBtn" style="display:none">
+            SVG-Datei herunterladen
+          </button>
+          <a href="shop.html" class="btn btn--outline">Zurück zum Shop</a>
+        </div>
+
+        <p class="cfg-success__note">
+          Tipp: Öffne die SVG-Datei in Inkscape oder Adobe Illustrator und konvertiere die Texte in Pfade (Strg+Shift+C), bevor du die Datei auf deinen Plotter überträgst.
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="cfg-footer">
+    <div class="container">
+      <p>© 2025 My Little Baby &nbsp;·&nbsp; <a href="index.html#kontakt">Kontakt</a> &nbsp;·&nbsp; <a href="#">Impressum</a> &nbsp;·&nbsp; <a href="#">Datenschutz</a></p>
+    </div>
+  </footer>
+
+  <!-- Cart drawer (shared) -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer__head">
+      <h3>Dein Warenkorb</h3>
+      <button class="cart-drawer__close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-drawer__items" id="cartItems"></div>
+    <div class="cart-drawer__foot">
+      <div class="cart-total">
+        <span>Gesamt</span>
+        <span id="cartTotal">0,00 €</span>
+      </div>
+      <a href="checkout.html" class="btn btn--primary btn--full" id="checkoutBtn">Zur Kasse →</a>
+      <button class="btn btn--ghost btn--full" id="continueBtn">Weiter einkaufen</button>
+    </div>
+  </aside>
+  <div class="toast" id="toast"></div>
+
+  <script src="js/cart.js"></script>
+  <script src="js/configurator.js"></script>
+</body>
+</html>
